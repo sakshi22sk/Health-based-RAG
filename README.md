@@ -16,6 +16,7 @@ Chunks are converted into vector embeddings
 FAISS indexes the vectors for similarity search
 User queries retrieve the most relevant chunks
 Retrieved context is synthesized into a clean, non-duplicated answer
+<img width="1904" height="858" alt="image" src="https://github.com/user-attachments/assets/f96d8731-5661-4950-a40b-f54ce95a08cb" />
 
 🎯 Why RAG?
 Traditional LLMs can hallucinate or provide outdated medical information.
