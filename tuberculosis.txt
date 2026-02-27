@@ -1,0 +1,22 @@
+Disease Name: Tuberculosis (TB)
+
+Overview:
+Tuberculosis is a contagious infectious disease that mainly affects the lungs but can also affect other parts of the body. It spreads through the air when an infected person coughs or sneezes.
+
+Causes:
+TB is caused by Mycobacterium tuberculosis bacteria. Prolonged exposure to an infected person increases the risk of transmission.
+
+Symptoms:
+Common symptoms include persistent cough lasting more than two weeks, chest pain, coughing up blood, weight loss, fever, night sweats, and fatigue.
+
+Prevention:
+Preventive measures include early detection, completing prescribed treatment, BCG vaccination, and ensuring good ventilation.
+
+Complications:
+Untreated TB can cause severe lung damage and spread to other organs.
+
+When to Seek Medical Help:
+Medical consultation is required if cough persists for more than two weeks.
+
+Disclaimer:
+This content is informational only.

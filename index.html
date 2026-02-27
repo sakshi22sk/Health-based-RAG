@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthQ • Healthcare RAG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg1: #0f2027;
+      --bg2: #203a43;
+      --bg3: #2c5364;
+      --glass: rgba(255, 255, 255, 0.12);
+      --border: rgba(255, 255, 255, 0.25);
+      --accent: #38efc3;
+      --text-light: #e6f1f5;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      margin: 0;
+    }
+
+    .hero span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      margin-top: 12px;
+      opacity: 0.85;
+      font-size: 1.1rem;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ---------- ASK CARD ---------- */
+    .ask-card h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 90px;
+      resize: none;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 14px;
+      font-size: 1rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-light);
+    }
+
+    textarea::placeholder {
+      color: #b7d3db;
+    }
+
+    .actions {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    button {
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      border: none;
+      color: white;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ---------- ANSWER ---------- */
+    .answer {
+      margin-top: 24px;
+      display: none;
+    }
+
+    .answer h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .answer p {
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+
+    /* ---------- HISTORY ---------- */
+    .history h2 {
+      margin-top: 0;
+    }
+
+    .history-item {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .history-item:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .disclaimer {
+      margin-top: 28px;
+      font-size: 0.85rem;
+      opacity: 0.75;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Your Health Questions,<br><span>Answered Instantly</span></h1>
+      <p>Reliable, evidence-based healthcare awareness powered by RAG AI</p>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="grid">
+
+      <!-- ASK -->
+      <div class="card ask-card">
+        <h2>Ask Your Question</h2>
+
+        <textarea id="questionInput" placeholder="e.g. How can dengue be prevented?"></textarea>
+
+        <div class="actions">
+          <div class="badge">🧠 AI-Powered • 📚 Evidence-Based</div>
+          <button onclick="askQuestion()">Ask Question</button>
+        </div>
+
+        <div class="answer" id="answerBox">
+          <h3>Answer</h3>
+          <p id="answerText"></p>
+        </div>
+      </div>
+
+      <!-- HISTORY -->
+      <div class="card history">
+        <h2>Question History</h2>
+        <div id="historyList"></div>
+      </div>
+
+    </div>
+
+    <div class="disclaimer">
+      ⚠️ This system provides healthcare awareness only and does not offer medical diagnosis or treatment.
+    </div>
+
+  </div>
+
+  <script>
+    const historyList = document.getElementById("historyList");
+    const answerBox = document.getElementById("answerBox");
+    const answerText = document.getElementById("answerText");
+
+    async function askQuestion() {
+      const question = document.getElementById("questionInput").value.trim();
+      if (!question) return;
+
+      answerBox.style.display = "block";
+      answerText.textContent = "Thinking…";
+
+      // Add to history
+      const item = document.createElement("div");
+      item.className = "history-item";
+      item.textContent = question;
+      historyList.prepend(item);
+
+      try {
+        const res = await fetch("http://127.0.0.1:8000/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question })
+        });
+
+        const data = await res.json();
+        answerText.textContent = data.answer || "No response.";
+
+      } catch (err) {
+        answerText.textContent = "Error connecting to the server.";
+      }
+    }
+  </script>
+
+</body>
+</html>

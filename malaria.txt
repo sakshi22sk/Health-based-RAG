@@ -1,0 +1,22 @@
+Disease Name: Malaria
+
+Overview:
+Malaria is a life-threatening disease caused by parasites transmitted through the bites of infected female Anopheles mosquitoes. It is most common in tropical and subtropical regions.
+
+Causes:
+Malaria is caused by Plasmodium parasites. Transmission occurs through mosquito bites, blood transfusion, or from mother to child during pregnancy.
+
+Symptoms:
+Symptoms include fever, chills, sweating, headache, nausea, vomiting, fatigue, and muscle pain. Symptoms usually appear 10–15 days after infection.
+
+Prevention:
+Preventive strategies include using insecticide-treated bed nets, indoor spraying, eliminating mosquito breeding sites, and early diagnosis and treatment.
+
+Complications:
+Severe malaria can cause anemia, organ failure, coma, and death if untreated.
+
+When to Seek Medical Help:
+Medical attention is necessary if fever develops after visiting malaria-prone regions.
+
+Disclaimer:
+This information is intended for awareness only.

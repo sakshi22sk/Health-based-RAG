@@ -1,0 +1,29 @@
+Disease Name: Dengue
+
+Overview:
+Dengue is a viral infection transmitted primarily by Aedes aegypti mosquitoes. It is widely prevalent in tropical and subtropical regions, especially in urban and semi-urban areas. Dengue outbreaks often occur during rainy seasons when mosquito breeding increases.
+
+Causes:
+Dengue is caused by the dengue virus, which has four distinct serotypes. Infection occurs when a person is bitten by an infected mosquito. The virus cannot spread directly from person to person.
+
+Symptoms:
+Symptoms usually appear 4–10 days after infection and may include high fever, severe headache, pain behind the eyes, muscle and joint pain, nausea, vomiting, swollen glands, and skin rashes. In severe cases, dengue can cause bleeding, low platelet count, and shock.
+
+Complications:
+Severe dengue can lead to internal bleeding, organ impairment, and plasma leakage. Early diagnosis and medical care significantly reduce fatality rates.
+
+Prevention:
+There is no specific cure for dengue, so prevention focuses on mosquito control. Measures include eliminating stagnant water, using mosquito repellents, wearing protective clothing, installing window screens, and community-based vector control programs.
+
+Public Health Importance:
+Dengue is a major public health concern in many countries due to rapid urbanization and climate change. Awareness and early detection are essential to prevent outbreaks.
+
+When to Seek Medical Help:
+Medical attention should be sought if symptoms such as persistent high fever, bleeding, severe abdominal pain, or vomiting occur.
+
+Frequently Asked Questions:
+- Can dengue spread from person to person? No, it spreads through mosquito bites.
+- Is dengue preventable? Yes, through mosquito control and preventive measures.
+
+Disclaimer:
+This information is for awareness and educational purposes only and does not substitute professional medical advice.

@@ -1,0 +1,25 @@
+Disease Name: Diabetes
+
+Overview:
+Diabetes is a chronic metabolic disorder characterized by high levels of blood glucose. It occurs when the body either does not produce enough insulin or cannot effectively use the insulin it produces.
+
+Types:
+The main types include Type 1 diabetes, Type 2 diabetes, and gestational diabetes. Type 2 diabetes is the most common and is often linked to lifestyle factors.
+
+Symptoms:
+Common symptoms include frequent urination, excessive thirst, increased hunger, fatigue, blurred vision, slow-healing wounds, and unexplained weight loss.
+
+Risk Factors:
+Risk factors include family history, obesity, physical inactivity, unhealthy diet, increasing age, and high blood pressure.
+
+Prevention:
+Type 2 diabetes can often be prevented or delayed through healthy eating, regular physical activity, maintaining a healthy weight, and routine health checkups.
+
+Complications:
+If left unmanaged, diabetes can lead to heart disease, kidney failure, nerve damage, vision loss, and other serious health problems.
+
+When to Seek Medical Help:
+Medical advice should be sought if symptoms persist or blood sugar levels remain consistently high.
+
+Disclaimer:
+This information is provided for educational purposes only.

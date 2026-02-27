@@ -1,0 +1,25 @@
+Disease Name: COVID-19
+
+Overview:
+COVID-19 is an infectious disease caused by the SARS-CoV-2 virus. It primarily affects the respiratory system but can also impact other organs. The disease spread globally and was declared a pandemic due to its rapid transmission and significant health impact.
+
+Causes:
+COVID-19 is caused by the SARS-CoV-2 virus and spreads mainly through respiratory droplets when an infected person coughs, sneezes, talks, or breathes. Transmission can also occur by touching contaminated surfaces and then touching the face.
+
+Symptoms:
+Symptoms range from mild to severe and may appear 2–14 days after exposure. Common symptoms include fever, cough, sore throat, fatigue, body aches, headache, loss of taste or smell, and difficulty breathing. Some individuals remain asymptomatic.
+
+Complications:
+Severe cases can lead to pneumonia, acute respiratory distress syndrome (ARDS), organ failure, and long-term health effects known as long COVID.
+
+Prevention:
+Preventive measures include vaccination, wearing masks in crowded areas, frequent hand washing, maintaining physical distance, and ensuring proper ventilation in indoor spaces.
+
+Public Health Importance:
+COVID-19 highlighted the importance of public health preparedness, vaccination programs, and global cooperation in controlling infectious diseases.
+
+When to Seek Medical Help:
+Immediate medical attention is required if symptoms such as severe breathing difficulty, chest pain, confusion, or bluish lips occur.
+
+Disclaimer:
+This information is for educational purposes only and does not replace professional medical advice.
